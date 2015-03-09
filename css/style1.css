@@ -1,0 +1,20 @@
+
+body{
+	background: red;
+}
+.myparagraphclass{
+
+	color:#000;
+	font-size:30px;
+	background:#DDD;
+}
+.myparagraphclass1{
+/*r-red
+g-green
+b-blue
+0-255*/
+	color:rgb(100,100,100);
+	font-size: 20px;
+	text-align: right;
+	/*background: black;*/
+}
