@@ -1,0 +1,113 @@
+<!Doctype html>
+<html>
+<head>
+<title>CSS</title>
+<style type="text/css">
+	.mydiv1{
+		background: url('../images/smiley.gif');
+		/*background-image: url('../images/smiley.gif');*/
+		height:32px;
+		width:32px;
+		background-position: right top;
+	}
+	.mydiv2{
+		display: none;
+	}
+	.mydiv3{
+		visibility: hidden;
+	}
+	.myul,..myul1{
+		list-style-type: none;
+	}
+	.myul li{
+		display: inline-block;
+		display: inline-block;
+		background: #000;
+		padding: 4px 68px;
+		color: #fff;
+		border-radius: 10px;
+	}
+	.myul1 li{
+		display: inline-block;
+		display: inline-block;
+		background: #000;
+		padding: 4px 68px;
+		color: #fff;
+	}
+	.myul1 li:hover{
+		background: red;
+		border-top: 4px solid green;
+	}
+	.myul2{
+		font-weight: bold;
+		background: linear-gradient(rgb(168, 146, 146),rgb(25, 145, 25));
+		font-size: 18px;
+		border-radius: 20px;
+	}
+	.myul2 li {
+		display: inline-block;
+		display: inline-block;
+		
+		padding: 4px 68px;
+		color: #fff;
+	}
+	.mydiv5{
+		border:2px solid red;
+		background: black;
+		color:#fff;
+		height: 200px;
+		width: 200px;
+		transform:rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+	}
+
+.mydiv6{
+	border:2px solid red;
+		background: black;
+		color:#fff;
+		height: 200px;
+		width: 200px;
+}
+.mydiv6:hover{
+	transform:scale(1,0.5);
+}
+</style>
+</head>
+<body>
+	<!-- <div style="font-size:50px">this is my div1 text this is my div1 text</div>
+	<div style="font-size: 3.13em;">this is my div1 text this is my div1 text</div> -->
+	<div class="mydiv1"></div>
+	<div class="mydiv2">this is my div1 text</div>
+	<div class="mydiv3">this is my div2 text</div>
+	<div class="mydiv4">this is my div3 text</div>
+	<ul class="myul">
+		<li>list Item1</li>
+		<li>list Item2</li>
+		<li>list Item3</li>
+		<li>list Item4</li>
+		<li>list Item5</li>
+		<li>list Item6</li>
+	</ul>
+	<ul class="myul1">
+		<li>list Item1</li>
+		<li>list Item2</li>
+		<li>list Item3</li>
+		<li>list Item4</li>
+		<li>list Item5</li>
+		<li>list Item6</li>
+	</ul>
+	<ul class="myul2">
+		<li>list Item1</li>
+		<li>list Item2</li>
+		<li>list Item3</li>
+		<li>list Item4</li>
+		<li>list Item5</li>
+		<li>list Item6</li>
+	</ul>
+	<div class="mydiv5">Bujji</div>
+	<div class="mydiv6">BujjiBabu</div>
+</body>
+</html>
