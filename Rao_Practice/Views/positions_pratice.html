@@ -1,0 +1,99 @@
+<!Doctype html>
+<html>
+<head>
+<title>CSS</title>
+<style type="text/css">
+.mydiv1{
+		background: url('../images/visa.jpg');
+		height:60px;
+		width:60px;
+		position: relative;
+		top:20px;
+		left:60px;
+}
+.mydiv2{
+	/*display:none;*/
+	visibility:hidden;
+}
+.myul,.myul1,.myul2{
+	list-style-type: none;
+}
+.myul li{
+	display: inline-block;
+	background: blue;
+	padding: 4px 64px;
+	color: #fff;
+}
+.myul1 li{
+	display: inline-block;
+	background: gray;
+	padding: 4px 64px;
+	color: white;
+	border-radius: 6px;
+	}
+.myul1 li:hover{
+	background: red;
+	color:black;
+	border-top: 2px solid blue;
+	border-bottom: 1px dotted gray;
+}
+/*.myul2
+{
+	background: linear-gradient(rgb(168, 126, 106),rgb(25, 105, 15));
+
+	
+}*/
+.myul2 li {
+	padding: 4px 64px;
+	display:inline-block;
+	border-radius: 12px;
+	background: linear-gradient(rgb(168, 126, 106),rgb(25, 105, 15));
+	
+}
+.mydiv5
+{
+	height: 200px;
+		width: 200px;
+		background: gray;
+		border:2px solid red;
+		transform:rotate(270deg);
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+}
+.mydiv5:hover{
+	transform:scale(1,2);
+}
+</style>
+</head>
+<body>
+	<div class="mydiv1"></div>
+	<div class="mydiv2">this is my div1 text</div>
+	<ul class="myul">
+		<li>list Item1</li>
+		<li>list Item2</li>
+		<li>list Item3</li>
+		<li>list Item4</li>
+		<li>list Item5</li>
+		<li>list Item6</li>
+	</ul>
+	<ul class="myul1">
+		<li>list Item1</li>
+		<li>list Item2</li>
+		<li>list Item3</li>
+		<li>list Item4</li>
+		<li>list Item5</li>
+		<li>list Item6</li>
+	</ul>
+	<ul class="myul2">
+		<li>list Item1</li>
+		<li>list Item2</li>
+		<li>list Item3</li>
+		<li>list Item4</li>
+		<li>list Item5</li>
+		<li>list Item6</li>
+	</ul>
+	<div class="mydiv5">Rao</div>
+</body>
+</html>
