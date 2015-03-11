@@ -8,11 +8,13 @@
 	width:400px;
 }
 .row1{
-	width:320px;
-	background: #757547;
+	width:350px;
+	background: #CDCDB4;
 	padding:8px;
 	border-radius: 6px;
 	margin-bottom: 5px;
+	font-size: 10px;
+
 }
 .step1,.step2,.step3
 {
@@ -31,28 +33,43 @@
 	margin-bottom: 4px;
 
 }
+input{
+	border-radius:7px;
+	margin-left:20px;
+}
+.adr{
+	position:relative;
+	top: 14px;
+	right:100px;
+}
+.txtarea{
+	position: relative;
+	margin-left: 37px;
+	border-radius: 5px;
+	left:14px;
+}
 </style>
 </head>
 <body>
 <center>	
 <div class="form1">
 <div class="step1"><b>Step 1: Your Details<b></div><br>
-<div class="row1">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="First and last name"/></div>
-<div class="row1">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="example@domain.com"/></div>
-<div class="row1">Phone&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="Eg.-+18127748943"/></div>
+<div class="row1">Name<input placeholder="First and last name"/></div>
+<div class="row1">Email<input placeholder="example@domain.com"/></div>
+<div class="row1">Phone<input placeholder="Eg.-+18127748943"/></div>
 <div class="step2"><b> Step 2: Delivery Address </b></div>
-<div class="row1">Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea></textarea></div>
-<div class="row1">Postcode&nbsp;&nbsp;&nbsp;<input ></div>
-<div class="row1">Country&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input ></div>
+<div class="row1"><div class ="adr">Address</div><textarea class="txtarea"></textarea></div>
+<div class="row1">Postcode<input ></div>
+<div class="row1">Country<input ></div>
 <div class="step3">Step 3: Card Details</div>
 <div class="cardtype"><b>Card type</b>
 	<input type="radio"><img src="../images/visa.jpg"height="12px" width="12px">visa
 	<input type="radio"><img src="../images/amex.png"height="12px" width="12px">Amex
 	<input type="radio"><img src="../images/master.jpg"height="12px" width="12px">Mastercard
 </div>
-	<div class="row1">Card number&nbsp;&nbsp;<input ></div>
-	<div class="row1"> Security code&nbsp;&nbsp;<input></div>
-	<div class="row1">Name on card&nbsp;&nbsp;<input placeholder="Exact name on the card"/></div>
+	<div class="row1">Card number<input ></div>
+	<div class="row1"> Security code<input></div>
+	<div class="row1">Name on card<input placeholder="Exact name on the card"/></div>
 	<div class="divclass"><br>
 <button class="buttonclass"><b>BUY IT!</b></button></div>
 </div>
