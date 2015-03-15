@@ -1,0 +1,398 @@
+<!-- <!Doctype html>
+<html>
+<head>
+<title>Bootstrap</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<style type="text/css">
+	.header{
+		background: #ededed;
+	}
+</style>
+</head>
+<body>
+	<div class="row-fluid">
+		<header>
+			<table class="table">
+				<tr class="text-center header">
+					<td>test1</td>
+					<td>test-2</td>
+					<td>test1</td>
+					<td>test1</td>
+					<td>test1</td>
+				</tr>
+			</table>
+		</header>
+	</div>
+</body>
+</html> -->
+
+
+
+<!doctype html>
+<html ng-app="project">
+  <head>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+  </head>
+  <body ng-controller="mainctrl">
+  	<div class="container">
+  		<table class="table table-bordered table-hover">
+  			<thead>
+  				<tr>
+  					<th>&nbsp;</th>
+  					<th>head1</th>
+  					<th>head1</th>
+  					<th>Add{{mymodel}}</th>
+  				</tr>
+  			</thead>
+  			<tbody>
+  				<tr>
+  					<td style="width:10%">&nbsp;</td>
+  					<td style="width:40%"><input type="text" placeholder="enter text" /> <span class="btn btn-default" data-ng-click="fnDynamicDynamicDivAdd(myObject1)">clickdropdown</span> <span class="btn btn-default" data-ng-click="fnDynamicDynamicDivAdd(myObject2)">click checkbox</span> <span class="btn btn-default" data-ng-click="fnDynamicDynamicDivAdd(myObject3)">click link</span> <span class="btn btn-default" data-ng-click="fnDynamicDynamicDivAdd(myObject4)">clickradio</span></td>
+  					<td style="width:40%">
+  						<!-- to display radio boxes starting-->
+  						<div data-ng-show="radionflag">
+  							<label data-ng-repeat="radioobj in myObjList">
+				                <input type="radio" name="response" value="{{radioobj.id}}" ng-model="radioobjmodel" ng-change="fnRadioModels(radioobj)"/>
+				                    {{radioobj.name}}
+				            </label>
+  						</div>
+  						<!-- to display radio boxes end-->
+  						<!-- to display dropdon boxes start-->
+  						<div data-ng-show="selectboxflag">
+  							<select data-ng-model="selectmodel">
+  								<option data-ng-repeat="opt in myObjList">{{opt.name}}</option>
+  							</select>
+  						</div>
+  						<!-- to display dropdon boxes end-->
+  						<!-- to display checkbox boxes start-->
+  						<div data-ng-show="checkboxflag">
+  							<span data-ng-repeat="checkboxobj in myObjList">
+  								<input type="checkbox" data-ng-model="checkboxobj.status" ng-change="fnSelectedCheckboxValues(checkboxobj)">{{checkboxobj.name}}
+  							</span>
+  						</div>
+  						<!-- to display checkbox boxes end-->
+  						<!-- to display link  start-->
+  						<div data-ng-show="linkflag" data-ng-click="fnLink()" ><a href="javascript:void(0)">{{myObjList[0]}}</a></div>
+  						<!-- to display link  start-->
+  					</td>
+  					<td data-ng-click="fnAdd()" style="width:10%">+</td>
+  				</tr>
+  				<tr ng-repeat="obj in resultArray">
+  					<td><span class="glyphicon glyphicon-remove-sign" data-ng-click="fnRemove($index)"></span> <span class="glyphicon glyphicon-edit" data-ng-click="fnEdit(obj,$index)"></span></td>
+  					<td></td>
+  					<td><span data-ng-repeat="list in obj.validoption"> {{list.name}} </span></td>
+  					<td>&nbsp;</td>
+  				</tr>
+  			</tbody>
+  		</table>
+  	</div>
+   
+<!--  =====================modal box staring====================== -->
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="linkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <input type="text" placeholder="search" data-ng-model="search">
+      </div>
+      <div class="modal-body">
+      <div>
+      	<table class="table table-bordered">
+      	<thead>
+      		<tr>
+      			<th>head1</th>
+      			<th>head2</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr data-ng-repeat="obj in finalArray | filter : search">
+      			<td>
+	      			<div class="unstyled" ng-init="expand=true">
+	      			 <div data-toggle="collapse" class="{{expand==true && 'glyphicon glyphicon-plus' || 'glyphicon glyphicon-minus'}}" href="#collapseExample{{$index}}" aria-expanded="false" aria-controls="collapseExample" data-ng-click="expand=!expand">
+	      			 	<input type="checkbox" ng-model="selectedAll" ng-change="checkAll(obj);">{{obj[0].name}}
+	      			 </div>
+	      			 <div class="collapse" id="collapseExample{{$index}}">
+		      			 <div ng-repeat="insodeobj in obj" >
+					        <input type="checkbox" ng-model="insodeobj.status" data-ng-change="fnSelected(insodeobj,insodeobj.status)">
+					        <span class="">{{insodeobj.id}}</span>
+					      </div>
+	      			 </div>
+			    	</div>
+	    		</td>
+      			<td></td>
+      		</tr>
+      	</tbody>
+      	</table>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================modelbox ending===================== -->
+
+   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script type="text/javascript">
+	angular.module('project', []).controller('mainctrl', function($scope) {
+
+		/* when type in input box if valid values dropdown this object1 will return (this object will get from server)*/
+		$scope.myObject1 = {
+			type:'dropdown',
+			values:[{id:1,name:'option1'},{id:2,name:'option2'},{id:3,name:'option3'}]
+		}
+		/* when type in input box if valid values dropdown this object1 will return end*/
+
+		/* when type in input box if valid values checkbox this object2 will return start (this object will get from server)*/
+		$scope.myObject2 = {
+			type:'checkbox',
+			values:[{id:1,name:'checkboxvalue1',status:false},{id:2,name:'checkboxvalue2',status:false},{id:3,name:'checkboxvalue3',status:false}]
+		}
+		/* when type in input box if valid values checkbox this object2 will return end*/
+
+		/* when type in input box if valid values link this object3 will return start (this object will get from server)*/
+		$scope.myObject3 = {
+			type:'link',
+			link:'clickhere'
+		}
+		/* when type in input box if valid values link this object3 will return end*/
+
+		/* when type in input box if valid values radio this object3 will return start (this object will get from server)*/
+		$scope.myObject4 = {
+			type:'radio',
+			values:[{id:1,name:'male'},{id:1,name:'female'}]
+		}
+		/* when type in input box if valid values radio this object3 will return end*/
+
+		$scope.fnDynamicDynamicDivAdd = function(obj) {
+			switch(obj.type)
+			{
+				case 'dropdown':			
+					 $scope.checkboxflag = false;
+					 $scope.selectboxflag = true;
+					 $scope.radionflag = false;
+					 $scope.linkflag = false;
+					 $scope.myObjList = obj.values;			
+					 $scope.myObjtype = obj.type;			
+				break;
+
+				case 'checkbox':			
+					 $scope.checkboxflag = true;
+					 $scope.selectboxflag = false;
+					 $scope.radionflag = false;
+					 $scope.linkflag = false;
+					 $scope.myObjtype = obj.type;	
+					 $scope.myObjList = obj.values;	
+				break;
+
+				case 'link':
+					 $scope.checkboxflag = false;
+					 $scope.selectboxflag = false;
+					 $scope.radionflag = false;
+					 $scope.linkflag = true;
+					 $scope.myObjtype = obj.type;
+					 $scope.myObjList = [obj.link];
+				break;
+
+				case 'radio':
+					 $scope.checkboxflag = false;
+					 $scope.selectboxflag = false;
+					 $scope.radionflag = true;
+					 $scope.linkflag = false;
+					 $scope.myObjtype = obj.type;
+					 $scope.myObjList = obj.values;
+				break;
+
+				default:
+					alert('not avalid type');
+				break;
+
+			}
+			return $scope.myObjList;
+		};
+
+/* select checkbox values starts*/
+$scope.chckedIndexs=[];
+  $scope.fnSelectedCheckboxValues = function (obj) {debugger;
+  	if(obj.status == true){
+  		$scope.chckedIndexs.push(obj);
+  	}else{
+  		for (var i = 0; i < $scope.chckedIndexs.length; i++) {
+  			if($scope.chckedIndexs[i].id == obj.id){
+  				$scope.chckedIndexs.splice(i, 1);
+  			}
+  		};
+  	}
+  	
+  	$scope.checkboxmodel = angular.copy($scope.chckedIndexs);
+  	console.log($scope.checkboxmodel);
+	}
+
+/* select checkbox values ending*/
+
+/* select radioobox values start*/
+	$scope.fnRadioModels = function(obj){
+		$scope.radiomodel = obj.name;
+	}
+/* select radioobox values end*/
+
+	$scope.resultArray = [];
+	$scope.fnAdd = function(){debugger;
+		switch($scope.myObjtype)
+			{
+				case 'checkbox':			
+					 $scope.validoption = $scope.checkboxmodel;		
+				break;
+
+				case 'dropdown':			
+					 $scope.validoption = [{name:$scope.selectmodel}];				
+				break;
+
+				case 'link':
+					 $scope.validoption = [{name:$scope.myObjList[0]}];
+				break;
+
+				case 'radio':
+					 $scope.validoption = [{name:$scope.radiomodel}];
+				break;
+
+				default:
+					alert('not avalid type');
+				break;
+
+			}
+			return $scope.resultArray.push({typedname:$scope.typedname, validoption:$scope.validoption,type:$scope.myObjtype});
+		}
+
+	/* delete row */
+	$scope.fnRemove = function(index){
+		$scope.resultArray.splice(index,1);
+	}
+	/* delete row */
+		/* delete row */
+	$scope.fnEdit = function(obj,index){debugger;
+		console.log($scope.myObjtype);
+		//$scope.myObjList = obj;
+			
+	}
+	/* delete row */
+
+
+	/* ================================today code =================*/
+
+	 $scope.linkArray = [
+    [
+        "1120",
+        "text1",
+        "A",
+        "text2"
+    ],
+    [
+        "1121",
+        "text1",
+        "A",
+        "text2"
+    ],
+    [
+        "1122",
+        "text1",
+        "B",
+        "text2"
+    ],
+    [
+        "1123",
+        "text1",
+        "B",
+        "text2"
+    ],
+    [
+        "1124",
+        "text1",
+        "C",
+        "text2"
+    ],
+    [
+        "1125",
+        "text1",
+        "B",
+        "text2"
+    ],
+    [
+        "1126",
+        "text1",
+        "C",
+        "text2"
+    ]
+];
+
+
+var temp1 = [];
+var temp2 = [];
+$scope.finalArray = [];
+$scope.linkObj = {};
+for(i=0; i<$scope.linkArray.length; i++){
+	temp2.push($scope.linkArray[i][2]);
+ 	temp1.push({name:$scope.linkArray[i][2],text1:$scope.linkArray[i][1],id:$scope.linkArray[i][0],text2:$scope.linkArray[i][3],staus:false});
+}
+jQuery.unique(temp2)
+for(var i=0; i<temp2.length;i++){
+	var temp4=[];
+	for(j=0; j<temp1.length; j++){
+		if(temp2[i]==temp1[j].name){
+			temp4.push(temp1[j]);
+		}
+	}
+	$scope.linkObj[temp2[i]] = temp4;
+	$scope.finalArray.push($scope.linkObj[temp2[i]]);
+}
+
+$scope.fnLink =function(){
+	$('#linkModal').modal('show');
+	console.log($scope.finalArray);
+}
+
+$scope.resultarray=[];
+$scope.fnSelected =function(obj,checkvalue1){debugger;
+  if(checkvalue1){
+  $scope.resultarray.push(obj);
+      }else{
+          $scope.selectedAll = false;
+      for(var i=0;i<$scope.resultarray.length;i++)
+      {
+          if(angular.equals($scope.resultarray[i],obj))
+          {                   
+              $scope.resultarray.splice(i,1);                      
+          }
+      }  
+      //console.log($scope.resultarray);          
+  }
+ console.log($scope.resultarray); 
+ // if($scope.resultarray.length == $scope.finalArray.length ){
+ // $scope.selectedAll = true;
+ // }
+};
+
+/* ======================today code =======================*/
+
+	});
+
+
+	 
+    </script>
+  </body>
+</html>
