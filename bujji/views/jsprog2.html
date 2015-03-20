@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<script type="text/javascript">
+   // (condition)?'statement1'||'statement2';
+   var a =10;
+   var b =5;
+ //var c =  (a<b) ? 'alert("a")' : 'alert("b")'
+var myDate = new Date();
+/*alert(myDate);
+myDate.getDate()
+17
+myDate.getDay()
+2
+myDate.getFullYear()
+2015
+myDate.getMonth()
+2
+myDate.getMonth()+1
+3
+myDate.getHours()*/
+
+var mycDate = (myDate.getMonth()+1) +'/'+myDate.getDate()+'/'+myDate.getFullYear();
+//alert(mycDate);
+var greeting =  (myDate.getHours()>17) ? 'Evening' : 'Day';
+
+//alert('Good '+ greeting);
+
+if(myDate.getHours()>17){
+//alert('Good'+greeting);
+}else{
+ alert('Good'+greeting); 
+}
+
+for(var i=0; i<10; i++){
+  //alert(i);
+}
+
+var x;
+var y = null;
+alert("x: "+ x);
+alert("y: "+ y);
+if(x===y){
+  alert("both are equel");
+}else{
+  alert('both are un equel');
+}
+
+	</script>
+</body>
+</html>

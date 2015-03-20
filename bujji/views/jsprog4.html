@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+	<title>JSON</title>
+</head>
+<body>
+	<input type="button" value="print" onclick="window.print()">
+	<input type="button" value="Click Here" onclick="fnMyfun()">
+	<div id="myid"></div>
+	<script type="text/javascript">
+		function fnMyfun(){
+			alert('function calling from dom');
+		}
+		var myObj ={name:'bujjibabu'};
+		document.getElementById('myid').innerHTML = myObj.name;
+	</script>
+</body>
+</html>
