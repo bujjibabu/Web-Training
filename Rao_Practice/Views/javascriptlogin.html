@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+</head>
+<body>
+	<div class="container">
+		<p class="cleaerfix"/>
+		<p class="cleaerfix"/>
+		<form class="col-sm-12 bg-info form-inline">
+			<h3>sign in form</h3>
+			<div class="form-group">
+				<label class="sr-only">username</label>
+				<input type="text" placeholder="username" id="username" class="form-control">
+			</div>
+			<div class="form-group">
+				<label class="sr-only">password</label>
+				<input type="password" id="pwd" placeholder="password" class="form-control">
+			</div>
+			<div class="btn btn-default btn-primary" onclick="fnSignIn()">
+				sign in
+			</div>
+			<br/>
+			<p class="cleaerfix"/>
+			<p class="cleaerfix"/>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+	var username = document.getElementById('username').value = 'Rao';
+	var password = document.getElementById('pwd').value = '123456789';
+	function fnSignIn(){
+	var username = document.getElementById('username').value = 'nelakurti';
+	var password = document.getElementById('pwd').value = '1234567890';
+	console.log('username',username);
+	console.log('password',password);
+	}
+	</script>
+
+</body>
+</html>

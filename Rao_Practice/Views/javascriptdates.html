@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<script type="text/javascript">
+/*
+	var a=10;
+	var b=5;
+	var c= (a<b) ? alert("a") : alert("b");*/
+
+	var myDate = new Date();
+	/*
+	alert(myDate);
+	document.write('Date is' +myDate.getDate());
+	document.write('day is' +myDate.getDay());
+	document.write('Year is:'+myDate.getFullYear());
+	document.write('month is: ' +(myDate.getMonth()+1));*/
+
+	var full_Date = (myDate.getMonth()+1) +'/'+myDate.getDate()+'/'+myDate.getFullYear();
+
+	alert(full_Date);
+
+	var greeting =  (myDate.getHours()>17) ? 'Evening' : 'Day';
+
+	alert('Good '+ greeting);
+
+	if(myDate.getDay()>5)
+	{
+		alert('Weekend');
+	}
+	else
+	{
+		alert('its not weekend');
+	}
+	/*
+	for(var i=0;i<=10;i++)
+	{
+		alert(i);
+	}*/
+
+	var x;
+var y = null;
+alert("x: "+ x);
+alert("y: "+ y);
+
+if(x===y){
+  alert("both are equel");
+}else{
+  alert('both are un equel');
+}
+
+	
+
+
+	</script>
+</body>
+</html>
