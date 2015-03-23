@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<title>Java Script to HTML</title>
+</head>
+<body>
+	<h1>What Can JavaScript Do?</h1>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<script>
+	function myFtn(){
+		var x=document.getElementById('demo');
+		x.style.fontsize = "25px";
+		x.style.color= "red";
+		x.style.background="yellow";
+
+	}
+</script>
+<button type="button" onclick="myFtn()"> Click</button>
+<!--<button type="button" onclick="document.getElementById('demo').innerHTML='HTML content replaced By javaScipt text'">CLICK</button>-->
+</body>
+</html>
