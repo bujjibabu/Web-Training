@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<title>String Functions</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<p class="text-center"> this is my paragraph </p>
+		<div class = "btn btn-primary" onmouseover="fnMouseOver()">Mouseover</div>
+		<div class="btn btn-primary" onclick="fnOnClick()">onclick</div>
+	</div>
+
+	<script type="text/javascript">
+	var  x = 'Kondala Rao';
+	var y = 'Please find where find Occurs';
+	var z;
+
+	function fnMouseOver()
+	{
+		//alert('Rao');
+		//alert(x.length);
+		//z = y.indexOf('find');
+		//z = y.lastIndexOf('find');
+		//z = y.search('find');
+		//z = y.slice(7,17);
+		//z = y.slice(-17,-7);
+		//z = y.slice(7);
+		//z = y.substring(7,22);
+		//z = y.substr(7, 15);
+		//z = y.charAt(5);
+		//z = y.charCodeAt(0);
+		//z = y.split(',');
+		z = y.replace(/find/, 'Find');
+
+		console.log(z);
+		//alert(z);
+		//document.write('Slice the paragraph ', z);
+		//document.write('Find occurs char location:',+z);
+		//document.write(x.length);
+
+
+	}
+
+	function fnOnClick()
+	{
+		alert('onclick function');
+	}
+
+
+
+	</script>
+	</body>
+</html>
