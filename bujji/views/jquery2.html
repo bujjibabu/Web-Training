@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+		ul li{
+			display: inline-block;
+			background: black;
+			color:#fff;
+			padding:10px 30px;
+		}
+		ul li:hover{
+			background: green;
+			cursor: pointer;
+		}
+		.my-active{
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p ><h4 class="text-center my-para text-success"> jQuery </h4></p>
+		<ul class="unstyled">
+			<li>list Item1</li>
+			<li>list Item2</li>
+			<li>list Item3</li>
+			<li>list Item4</li>
+			<li>list Item5</li>
+			<li>list Item6</li>
+			<li>list Item7</li>
+			<li>list Item8</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('ul li:first').addClass('my-active');
+		$('ul li').click(function(){
+			$('ul li').removeClass('my-active');
+			$(this).addClass('my-active');
+		})
+	})
+	</script>
+</body>
+</html>
