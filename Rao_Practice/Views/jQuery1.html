@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<p ><h4 class="text-center my-para text-success"> jQuery </h4></p>
+		<p class="text-center my-para1" style="display:none;"> jQuery Show</p>
+		<div class="btn btn-primary mydiv1">show()</div>
+		<div class="btn btn-primary mydiv2">hide()</div>
+
+		</div>
+		<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.mydiv1').click(function(){
+			$('.my-para1').show();
+		})
+
+		$('.mydiv2').click(function(){
+			$('.my-para1').hide();
+		})
+
+	});
+
+	</script>
+</body>
+</html>
