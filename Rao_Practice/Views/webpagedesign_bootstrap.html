@@ -10,11 +10,15 @@
 <div class="row-fluid clearfix header">
 	<div class="col-sm-2 c1"><h3><strong>Simple #2</strong></h3></div>
 		<div class="col-sm-offset-4 col-sm-6">
-		<div class="col-sm-2 "><span class="btn1 text-center row1" ><strong>Home</strong></span></div>
-		<div class="col-sm-2 text-center row1"><span class="btn1 text-center"><strong>About us</strong></span></div>
-		<div class="col-sm-3 text-center row1"><span class="btn1 text-center"><strong>what we do</strong></span></div>
-		<div class="col-sm-2 text-center row1"><span class="btn1 text-center"><strong>The Team</strong></span></div>
-		<div class="col-sm-3 text-center row1"><span class="btn1 text-center"><strong>Contact Us</strong></span></div>
+		<ul class="list-unstyled">
+
+			<li class=" row1"><strong>Home</strong></li>
+			<li class=" row1"><a href="http://w3schools.invisionzone.com/"><strong>About us</strong></a></li>
+			<li class=" row1"><a href="http://www.w3schools.com/default.asp"><strong>What we do</strong></a></li>
+			<li class=" row1"><a href="http://www.w3schools.com/html/default.asp"><strong>The Team</strong></a></li>
+			<li class=" row1"><a href="http://www.w3schools.com/js/js_examples.asp"><strong>Contact Us</strong></a></li>
+		</ul>
+
 	</div>
 </div>
 	<p class="clearfix"></p>
@@ -23,20 +27,17 @@
 <div class="col-sm-12 textpart">
 	<div class="col-sm-3 list">
 		<div class="ls">
-			<p class="clearfix"></p>
-			<p class="clearfix"></p>
-			<div class="li">First Category</div>
-			<div class="li">First Category</div>
-			<div class="li">First Category</div>	
-			<div class="li">First Category</div>
-			<div class="li">First Category</div>
-			<div class="li">First Category</div>
-			<div class="li">First Category</div>
-			<p class="clearfix"></p>
-	<p class="clearfix"></p><p class="clearfix"></p>
-	<p class="clearfix"></p><p class="clearfix"></p>
-	<p class="clearfix"></p><p class="clearfix"></p>
-	<p class="clearfix"></p>
+			<ul class="list-unstyled">
+			<li class="lis"><a href="http://www.w3schools.com/js/js_intro.asp"><strong>Java script Basics</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_debugging.asp"><strong>Java script Debugging</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_arrays.asp"><strong>Java script Arrays</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_type_conversion.asp"><strong>Java script Num Converter</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_objects.asp"><strong>Java script Object</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_datatypes.asp"><strong>Java script Data Types</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_date_methods.asp"><strong>Java script Date Methods</strong></a></li>
+		</ul>
+
+
 		</div>	
 	</div>
 	<div class="col-sm-9 p1">
@@ -84,9 +85,24 @@ HTML5 and CSS3 but dont yet fully understand all it has to offer.</p>
 
 </div>
 </div>
-</div>
 <p class="clearfix"></p>
 <div class="row-fluid col-sm-6 clearfix footer"> Copyright &nbsp; &copy;&nbsp;view by your website</div>
 <div class="footer col-sm-6 text-right"> Design by simple website template </div>
+
+<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.row1:first').addClass('my-active');
+	$('.row1').click(function(){
+		$('.row1').removeClass('my-active');
+		$(this).addClass('my-active');
+	})
+	$('.lis:first').addClass('active');
+	$('.lis').click(function(){
+		$('.lis').removeClass('active');
+		$(this).addClass('active');
+	})	
+	});
+</script>
 </body>
 </html>

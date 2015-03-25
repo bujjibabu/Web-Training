@@ -1,14 +1,37 @@
 .main{
-	background: #EDEDED;
+	background: #EDEDED;	
 }
 .row1
 {
-	
+	list-style-type: none;
 	color:white;
+	
+	border-radius: 6px;
+	padding:7px 15px;
+	background: #338585;
+	margin-top: 8px;
+	margin-right: 5px;
+	display:inline-block;
+	cursor: pointer;
 }
+
+.row1:hover
+{
+	background: #66FF66;
+}
+.my-active{
+			background: #66FF66 ;
+		}
+
+
+
 .header{
 	background:#2E5CB8;
+
 }
+
+
+
 .footer{
 	background:#2E5CB8;
 	line-height:3;
@@ -26,21 +49,27 @@
 	line-height: 1;
 	color:white;
 }
-.list{
-	list-style: none;
+.lis{
+	list-style-type: none;
 	background: #FFFFE0;
-	border-radius: 4px
+	border-radius: 4px;
+	background: #2E5CB8;
+	color:white;
+	padding:7px 15px;
+	margin-bottom: 7px;
+	cursor: pointer;
 }
-.li{
-	border: 1px solid black;
-	padding-left: 10px;
-  margin: 5px;
-  border-radius: 4px;
-  color:white;
-  background: #829DD4;
-  padding: 3px;
- 
+
+.lis:hover{
+	background:#66CCFF;
+
 }
+.active{
+
+	background: #66CCFF;
+}
+
+
 .ls{
 
 	margin-right:10px;
