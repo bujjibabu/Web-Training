@@ -4,11 +4,6 @@
 <title>Webpage Design Using boot strap CSS</title>
 <link rel="stylesheet" href="../css/bootstrap.css">
 <link rel="stylesheet" href="../css/webpage.css">
-<style type="text/css">
-.my-active{
-			background: #FF0066 ;
-		}
-</style>
 
 </head>
 <body class="main">
@@ -18,10 +13,10 @@
 		<ul class="list-unstyled">
 
 			<li class=" row1"><strong>Home</strong></li>
-			<li class=" row1"><strong>About us</strong></li>
-			<li class=" row1"><strong>What we do</strong></li>
-			<li class=" row1"><strong>The Team</strong></li>
-			<li class=" row1"><strong>Contact Us</strong></li>
+			<li class=" row1"><a href="http://w3schools.invisionzone.com/"><strong>About us</strong></a></li>
+			<li class=" row1"><a href="http://www.w3schools.com/default.asp"><strong>What we do</strong></a></li>
+			<li class=" row1"><a href="http://www.w3schools.com/html/default.asp"><strong>The Team</strong></a></li>
+			<li class=" row1"><a href="http://www.w3schools.com/js/js_examples.asp"><strong>Contact Us</strong></a></li>
 		</ul>
 
 	</div>
@@ -33,13 +28,13 @@
 	<div class="col-sm-3 list">
 		<div class="ls">
 			<ul class="list-unstyled">
-			<li class="lis"><strong>Java script Basics</strong></li>
-			<li class="lis"><strong>Java script Button Click</strong></li>
-			<li class="lis"><strong>Java script Arrays</strong></li>
-			<li class="lis"><strong>Java script Num Converter</strong></li>
-			<li class="lis"><strong>Java script Object</strong></li>
-			<li class="lis"><strong>Java script Login</strong></li>
-			<li class="lis"><strong>Java script Date functions</strong></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_intro.asp"><strong>Java script Basics</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_debugging.asp"><strong>Java script Debugging</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_arrays.asp"><strong>Java script Arrays</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_type_conversion.asp"><strong>Java script Num Converter</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_objects.asp"><strong>Java script Object</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_datatypes.asp"><strong>Java script Data Types</strong></a></li>
+			<li class="lis"><a href="http://www.w3schools.com/js/js_date_methods.asp"><strong>Java script Date Methods</strong></a></li>
 		</ul>
 
 
@@ -95,11 +90,19 @@ HTML5 and CSS3 but dont yet fully understand all it has to offer.</p>
 <div class="footer col-sm-6 text-right"> Design by simple website template </div>
 
 <script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
-<script type="text/">
+<script type="text/javascript">
 $(function(){
-	$('row1:first').addClass('my-active');
-		})
-});
+	$('.row1:first').addClass('my-active');
+	$('.row1').click(function(){
+		$('.row1').removeClass('my-active');
+		$(this).addClass('my-active');
+	})
+	$('.lis:first').addClass('active');
+	$('.lis').click(function(){
+		$('.lis').removeClass('active');
+		$(this).addClass('active');
+	})	
+	});
 </script>
 </body>
 </html>

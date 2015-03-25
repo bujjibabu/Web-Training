@@ -1,5 +1,5 @@
 .main{
-	background: #EDEDED;
+	background: #EDEDED;	
 }
 .row1
 {
@@ -24,9 +24,14 @@
 		}
 
 
+
 .header{
 	background:#2E5CB8;
+
 }
+
+
+
 .footer{
 	background:#2E5CB8;
 	line-height:3;
@@ -58,6 +63,10 @@
 .lis:hover{
 	background:#66CCFF;
 
+}
+.active{
+
+	background: #66CCFF;
 }
 
 
