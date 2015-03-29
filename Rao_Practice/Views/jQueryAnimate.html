@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+	.animate{
+		height:100px;
+		width:100px;;
+		background: red;
+		position: relative;
+	}
+
+	</style>
+
+	<body>
+	<div class="container">
+		<div class="animate"></div>
+		<p class="chaining">this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph this is my first paragraph </p>
+
+		<div class="btn btn-success my-animate">animate</div>
+		<div class="btn btn-danger my-chaining">chaining</div>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.my-animate').click(function(){
+			/*$('.animate').animate({left:'200px',opacity:'0.2'},2000,function(){
+				alert('animate complted');
+			})*/
+			$('.animate').animate({
+				height:'toggle'
+			})
+
+		$('.my-chaining').click(function(){
+			$('.chaining').css({'color':'blue'}).slideUp(1000).slideDown(1500);
+		})	
+		});
+
+	})
+	
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<doctype html>
+<html>
+<head>
+<title>Formpractice_Bootstrap Jquery</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<style type="text/css">
+.myform{
+	border:1px solid #000;
+	background: #BDDE5C;
+} 
+
+
+.adr{
+	padding-bottom: 40px;
+}
+.frmgrp{
+	border:1px solid #000;
+	border-radius: 4px;
+	background: #E6FFB2;
+}
+.btn-info{
+	border-radius: 5px;
+}
+</style>
+</head>
+<body>
+	<div class="container"><br>
+		<form class="col-sm-offset-3 col-sm-6 form-horizontal form-responsive myform">
+			
+			<div class="col-sm-offset-1 col-sm-10 col-sm-offset-1">
+			
+			<h4 class="col-offset-1">Step1: Your details</h4>
+			
+			
+			<div class="form-group frmgrp">
+			<label class="col-sm-3 control-label">Name</label>
+			<div class="col-sm-8">
+				<input type="text" placeholder="First and lastname" class="form-control"/>
+			</div>
+			</div>
+			<p class="clearfix"/>
+
+		<div class="form-group frmgrp">
+			<label class="col-sm-3 control-label">Email</label>
+			<div class="col-sm-8">
+				<input type="email" placeholder="example@domain.com" class="form-control"/>
+			</div>
+			</div>
+
+		<div class="form-group frmgrp">
+			<label class="col-sm-3">Phone</label>
+			<div class="col-sm-8">
+				<input type="phone" placeholder="Eg. +8128848943" class="form-control"/>
+			</div>
+			</div>
+			<h4 class="col-offset-1 col-sm-10-col-sm-1">Step2: Delivery address</h4>
+		
+	 		<div class="form-group frmgrp">
+			<label class="col-sm-3 control-label">Address</label>
+			<div class="col-sm-8">
+				<textarea class="col-sm-11 adr"></textarea>
+			</div>
+		</div>
+
+		<div class="form-group frmgrp">
+			<label class="col-sm-3 control-label">Postcode</label>
+			<div class="col-sm-8">
+				<input type="numeric" class="form-control"/>
+			</div>
+			</div>
+
+
+		<div class="form-group frmgrp">
+			<label class="col-sm-3">Country</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control"/>
+			</div>
+			</div>
+
+			<h4 class="col-offset-1 col-sm-10-col-sm-1">Step3: Card details</h4>
+
+			<div class="form-group frmgrp">
+				<div class="col-sm-3"><strong>Card type</strong></div><br>
+				<div class="col-sm-offset-3 col-sm-8">
+				<input type="radio"><img src="../images/visa.jpg"height="10px" width="10px">visa&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio"<img src="../images/amex.png"height="10px" width="10px">Amex&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio"><img src="../images/master.jpg"height="10px" width="10px">Mastercard
+			</div>
+			</div>
+
+			<div class="form-group frmgrp">
+			<label class="col-sm-3 control-label">Cardnumber</label>
+			<div class="col-sm-8">
+				<input type="numeric" class="form-control"/>
+			</div>
+			</div>
+
+			<div class="form-group frmgrp">
+			<label class="col-sm-3 control-label">Security code</label>
+			<div class="col-sm-8">
+				<input type="numeric" class="form-control"/>
+			</div>
+			</div>
+
+			<div class="form-group frmgrp">
+			<label class="col-sm-3 control-label">Name on card</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control"/>
+			</div>
+			</div>
+
+				<button class="col-sm-offset-5 col-sm-3 btn btn-info btn-buy">BUY IT!</button>
+				<p class="clearfix"></p>
+
+			</div>
+<p class="clearfix"></p>
+	
+	</form>
+</div>
+<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+$(function(){
+	$('.btn-buy').click(function(){
+		
+
+	})
+
+});
+
+
+</script>
+</body>
+</html>

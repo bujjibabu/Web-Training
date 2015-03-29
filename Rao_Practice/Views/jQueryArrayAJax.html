@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="my-div1"> The property names must be camel-cased when used with the animate() method: You will need to write paddingLeft instead of padding-left, marginRight instead of margin-right, and so on.</div>
+		<div class="btn btn-success my-text">Get text</div>
+		<div class="my-set-text"></div>
+		<table class="table table-bordered my-set-html"></table>
+		<div class="btn btn-default set-text">setText()</div>
+		<div class="btn btn-default set-html">sethtml()</div>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.my-text').click(function(){
+				var textmethod = $('.my-div1').text();
+				console.log("text method: ",textmethod);
+
+				var htmlmethod = $('.my-div1').html();
+				console.log("html method: ",htmlmethod);
+
+			})
+
+			$('.set-text').click(function(){
+				$('.my-set-text').text('The property names must be camel-cased when used with the animate()');
+			});
+			$('.set-html').click(function(){
+				var myArray = [{no:1,name:'bujji',phone:954444443356},{no:2,name:'bujji1',phone:9544444433},{no:3,name:'bujji2',phone:95444444334},{no:4,name:'bujji',phone:9544444433},{no:5,name:'bujji4',phone:95444444378},{no:1,name:'bujji',phone:954444443356},{no:2,name:'bujji1',phone:9544444433},{no:3,name:'bujji2',phone:95444444334},{no:4,name:'bujji',phone:9544444433},{no:5,name:'bujji4',phone:95444444378},{no:1,name:'bujji',phone:954444443356},{no:2,name:'bujji1',phone:9544444433},{no:3,name:'bujji2',phone:95444444334},{no:4,name:'bujji',phone:9544444433},{no:5,name:'bujji4',phone:95444444378}];
+
+				var myvar = $('.my-set-html');
+				myvar.append('<tr class="bg-success"><td>S.NO</td><td>Name</td><td>phone</td>');
+				for (var i = 0; i < myArray.length; i++)
+				{
+					myvar.append('<tr><td>'+myArray[i].no+'</td><td>'+myArray[i].name+'</td><td>'+myArray[i].phone+'</td></tr>');
+				}
+			});
+
+		});
+	</script>	
+
+</body>
+</html>

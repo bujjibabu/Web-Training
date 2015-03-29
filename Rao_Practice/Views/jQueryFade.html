@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+	<title>Fade Functions</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+		ul li{
+			display: inline-block;
+			background: black;
+			color:#fff;
+			padding:10px 30px;
+		}
+		ul li:hover{
+			background: green;
+			cursor: pointer;
+		}
+		.my-active{
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p ><h4 class="text-center my-para text-success"> jQuery Fade Functions </h4></p>
+		<table class="table table-bordered" style="display:none">
+			<thead>
+				<tr>
+					<th>td1</th>
+					<th>td2</th>
+					<th>td3</th>
+					<th>td4</th>
+					<th>td5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+				<tr>
+					<td>td1</td>
+					<td>td2</td>
+					<td>td3</td>
+					<td>td4</td>
+					<td>td5</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="btn btn-success fadeIn-Btn">fadeIn</div>
+		<div class="btn btn-danger fadeOut-Btn">fadeOut</div>
+		<div class="btn btn-info fadeToggle-Btn">FadeToggle</div>
+		<div class="btn btn-success fadeInfo-Btn">Fade Info</div>
+
+	</div>
+
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	$('.fadeIn-Btn').click(function(){
+		$('.table').fadeIn(2000);
+	});
+	$('.fadeOut-Btn').click(function(){
+		$('.table').fadeOut(1000);
+	});
+	$('.fadeToggle-Btn').click(function(){
+		$('.table').fadeToggle(1000);
+	});
+	$('.fadeInfo-Btn').click(function(){
+		$('.table').fadeTo(1000,0.6);
+		
+	});
+
+	})
+	</script>
+</body>
+</html>
+	

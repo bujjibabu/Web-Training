@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form class="col-sm-offset-4 col-sm-4">
+			<div class="form-group">
+				<label>User Name</label>
+				<input type="text" class="form-control username" placeholder="Please enter username" >
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control password" placeholder="Please enter password">
+			</div>
+			<div class="btn btn-primary btn-login"> LogIn </div>
+		</form>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.btn-login').click(function(){
+			var myObject = {}
+			var myArray =[]
+			
+			var myusername = $('.username').val();
+			var mypassword = $('.password').val();
+			myObject.uname = myusername;
+			myObject.pwd = mypassword;
+			console.log(myObject);
+			myArray.push(myObject)
+			console.log(myArray);
+			
+
+		})
+
+	});
+
+	//settimeout(function(){ajaxcall}, 1000)
+	</script>
+</body>
+</html>
