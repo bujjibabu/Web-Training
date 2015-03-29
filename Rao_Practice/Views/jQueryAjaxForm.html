@@ -35,7 +35,7 @@
 			<div class="form-group frmgrp">
 			<label class="col-sm-3 control-label">Name</label>
 			<div class="col-sm-8">
-				<input type="text" placeholder="First and lastname" class="form-control"/>
+				<input type="text" placeholder="First and lastname" class="form-control name"/>
 			</div>
 			</div>
 			<p class="clearfix"/>
@@ -43,14 +43,14 @@
 		<div class="form-group frmgrp">
 			<label class="col-sm-3 control-label">Email</label>
 			<div class="col-sm-8">
-				<input type="email" placeholder="example@domain.com" class="form-control"/>
+				<input type="text" placeholder="example@domain.com" class="form-control email"/>
 			</div>
 			</div>
 
 		<div class="form-group frmgrp">
 			<label class="col-sm-3">Phone</label>
 			<div class="col-sm-8">
-				<input type="phone" placeholder="Eg. +8128848943" class="form-control"/>
+				<input type="text" placeholder="Eg. +8128848943" class="form-control phone"/>
 			</div>
 			</div>
 			<h4 class="col-offset-1 col-sm-10-col-sm-1">Step2: Delivery address</h4>
@@ -58,14 +58,14 @@
 	 		<div class="form-group frmgrp">
 			<label class="col-sm-3 control-label">Address</label>
 			<div class="col-sm-8">
-				<textarea class="col-sm-11 adr"></textarea>
+				<textarea class="col-sm-11 adr addres"></textarea>
 			</div>
 		</div>
 
 		<div class="form-group frmgrp">
 			<label class="col-sm-3 control-label">Postcode</label>
 			<div class="col-sm-8">
-				<input type="numeric" class="form-control"/>
+				<input type="text" class="form-control zipcode"/>
 			</div>
 			</div>
 
@@ -73,7 +73,7 @@
 		<div class="form-group frmgrp">
 			<label class="col-sm-3">Country</label>
 			<div class="col-sm-8">
-				<input type="text" class="form-control"/>
+				<input type="text" class="form-control ctry"/>
 			</div>
 			</div>
 
@@ -83,7 +83,7 @@
 				<div class="col-sm-3"><strong>Card type</strong></div><br>
 				<div class="col-sm-offset-3 col-sm-8">
 				<input type="radio"><img src="../images/visa.jpg"height="10px" width="10px">visa&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="radio"<img src="../images/amex.png"height="10px" width="10px">Amex&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio"><img src="../images/amex.png"height="10px" width="10px">Amex&nbsp;&nbsp;&nbsp;&nbsp;
 				<input type="radio"><img src="../images/master.jpg"height="10px" width="10px">Mastercard
 			</div>
 			</div>
@@ -91,25 +91,25 @@
 			<div class="form-group frmgrp">
 			<label class="col-sm-3 control-label">Cardnumber</label>
 			<div class="col-sm-8">
-				<input type="numeric" class="form-control"/>
+				<input type="numeric" class="form-control cardnum"/>
 			</div>
 			</div>
 
 			<div class="form-group frmgrp">
 			<label class="col-sm-3 control-label">Security code</label>
 			<div class="col-sm-8">
-				<input type="numeric" class="form-control"/>
+				<input type="numeric" class="form-control scode"/>
 			</div>
 			</div>
 
 			<div class="form-group frmgrp">
 			<label class="col-sm-3 control-label">Name on card</label>
 			<div class="col-sm-8">
-				<input type="text" class="form-control"/>
+				<input type="text" class="form-control ncard"/>
 			</div>
 			</div>
 
-				<button class="col-sm-offset-5 col-sm-3 btn btn-info btn-buy">BUY IT!</button>
+				<button class="col-sm-offset-5 btn btn-info btn-buy">BUY IT!</button>
 				<p class="clearfix"></p>
 
 			</div>
@@ -121,7 +121,32 @@
 	<script type="text/javascript">
 $(function(){
 	$('.btn-buy').click(function(){
-		
+		var myObject = {}
+		var myArray = []
+
+		var myusername= $('.name').val();
+		var myemail= $('.email').val();
+		var myphone= $('.phone').val();
+		var myaddress=$('.addres').val();
+		var mypostalcode=$('.zipcode').val();
+		var myCountry=$('.ctry').val();
+		var myCardnumber=$('.cardnum').val();
+		var mySecurityCode=$('.scode').val();
+		var myNameonCard=$('.ncard').val();
+
+		myObject.uname=myusername;
+		myObject.mailid=myemail;
+		myObject.phonenum=myphone;
+		myObject.add=myaddres;
+		myObject.Postcode=mypostalcode;
+		myObject.ctry=myCountry;
+		myObject.cardnum=myCardnumber;
+		myObject.scode=mySecurityCode;
+		myObject.ncard=myNameonCard;
+
+		console.log(myObject);
+		myArray.push(myObject);
+		console.log(myArray);
 
 	})
 
