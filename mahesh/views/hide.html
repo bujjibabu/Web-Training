@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+	<title>hide prg</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+    .one,.three,.five{
+    	cursor: pointer;
+    }
+    .two,.four,.six{
+    	text-align:justify;
+    }
+    .seven{
+    	background: #cdf;
+    }
+	</style>
+</head>
+<body>
+ <div class="container">
+ <div class="col-sm-3">
+    
+
+    <div class="col-sm-12 form-control one">home</div>
+    <div class="col-sm-12 two" style="display:none">In 2001, the playing careers of Mike Hesson and Brendon McCullum overlapped too, at a slightly different level. They batted together for Otago A, Hesson the opener and captain, McCullum, the young emerging wicketkeeper-batsman who had played five first-class games but was yet to score a fifty. Now they are coach and captain of New Zealand, together aiming for a World Cup triumph.</div>
+    <div class="col-sm-12 form-control three" >career</div>
+    <div class="col-sm-12 four" style="display:none">Clarke and McCullum have both spoken of their friendship and great mutual respect. They are aggressive captains who always look to move the game forward. They do so with the backing of coaches who share those principles and have created a calm environment around the squad, yet who differ greatly in background and public image.</div>
+ 	<div class="col-sm-12 form-control five">About us</div>
+    <div class="col-sm-12 six" style="display:none ">Lehmann is one of the most easily identifiable men in Australian sport; Hesson one of the most anonymous in New Zealand, that guy who hangs around the cricket team and kind of looks like Andy Flower. Lehmann is the joker, the larrikin, always up for a beer with the boys; Hesson by his own admission is "not the type of guy to go out and celebrate and jump around like a mad man".</div>
+
+
+ </div>
+ </div>
+
+
+
+
+
+ <script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+ <script type="text/javascript">
+$(function(){
+     $('.one').click(function(){
+     	$('.two').toggle();
+     	$('.four').fadeOut();
+     	$('.six').fadeOut();
+     })
+     $('.three').click(function(){
+     	$('.four').toggle();
+     	$('.two').fadeOut();
+     	$('.six').fadeOut();
+     })
+     $('.five').click(function(){
+     	$('.six').toggle();
+     	$('.two').fadeOut();
+     	$('.four').fadeOut();
+     })
+
+
+
+})
+
+
+
+
+
+
+ </script>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
