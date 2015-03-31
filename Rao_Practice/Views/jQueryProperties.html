@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+
+	<div class="container">
+		<a id="test">click here to youtube</a>
+		<h4 class="text-center clearfix">Set Attributes</h4>
+		<div class="btn btn-warning my-attar">set attr</div>
+		<h4 class="text-center clearfix">Add elements</h4>
+		<div class="mydiv">
+			<ul class="myul">
+				<li>lists Item1</li>
+				<li>lists Item2</li>
+				<li>lists Item3</li>
+				<li>lists Item4</li>
+			</ul>
+		</div>
+		<h4 class="text-center clearfix">jQuery remove</h4>
+		<div class="btn btn-danger jquey-remove">remove</div>
+		<div class="btn btn-danger jquey-empty">empty</div>
+
+		</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.my-attar').click(function(){
+			$('#test').attr('href','https://www.youtube.com/');
+			$('#test').attr('class','testingCls');
+
+		});
+		$('.myul').append('<li>lists Item5</li>');
+		$('.myul').prepend('<li>lists Item0</li>');
+		$('.myul').after('<li>after method</li>');
+		$('.myul').before('<li>before method</li>');
+
+		$('.jquey-remove').click(function(){debugger;
+			$('.myul').remove();
+		});
+		$('.jquey-empty').click(function(){
+			$('.myul').empty();
+		});
+
+	});
+
+	</script>
+</body>
+</html>
