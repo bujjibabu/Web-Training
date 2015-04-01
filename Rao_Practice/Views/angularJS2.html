@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="">
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body ng-controller="myCtrl">>
+	<div class="container">
+		<form class="col-sm-offset-4 col-sm-4">
+			<div class="form-group">
+				<label ng-bind="user"></label>
+				<input type="text" class="form-control username" ng-model="uname" placeholder="Please enter username">
+			</div>
+			<div class="form-group">
+				<label ng-bind="pass"></label>
+				<input type="password" class="form-control password" ng-model="pword" placeholder="Please enter password">
+			</div>
+			<div class="btn btn-primary btn-login" ng-click="fnSignIn()" ng-bind="loginName"></div>
+		</form>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.min.js"></script>
+	<script type="text/javascript">
+	function myCtrl($scope)
+	{	$scope.user='username';
+		$scope.pass='password';
+		$scope.loginName='login';
+		/*$scope.uname='rao515';
+		$scope.pword='rao515';*/
+		$scope.fnSignIn = function(){
+			$scope.myObject={name:$scope.uname,pasword:$scope.pword}
+
+			console.log($scope.myObject);
+			$scope.uname='';
+			$scope.pword='';
+		}
+
+		
+	}
+	</script>
+</body>
+</html>

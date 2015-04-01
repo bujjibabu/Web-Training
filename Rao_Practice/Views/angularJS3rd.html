@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="">
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body ng-controller="myCtrl">
+	<div class="container">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Phone</td>
+					<td>Address</td>
+					<td>Pin</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="obj in myArray">
+					<td ng-bind="obj.name"></td>
+					<td ng-bind="obj.phone"></td>
+					<td ng-bind="obj.address"></td>
+					<td ng-bind="obj.pin"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.min.js"></script>
+	<script type="text/javascript">
+
+	function myCtrl($scope){
+		$scope.myArray=[{name:'Rao',phone:8127748943,address:'GE',pin:30328},
+			{name:'Vikram',phone:8127748942,address:'TX',pin:75038},
+			{name:'mahesh',phone:7852143209,address:'GE',pin:30328},
+			{name:'surya',phone:8179998140,address:'TX',pin:75038},
+			{name:'bujji4',phone:7799476655,address:'a.p',pin:532459},
+			{name:'bujji5',phone:7799476655,address:'a.p',pin:532459},
+			{name:'bujji6',phone:7799476655,address:'a.p',pin:532459},
+			{name:'bujji',phone:7799476655,address:'a.p',pin:532459}];
+	}
+
+	</script>
+</body>
+</html>

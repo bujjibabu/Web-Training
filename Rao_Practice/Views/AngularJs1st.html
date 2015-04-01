@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="">
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form class="col-sm-offset-4 col-sm-4" >
+			<div class="form-group">
+				<lable>User Name</lable>
+				<input type="text" class="form-control uname" ng-model="username" placeholder="enter username">
+
+			</div>
+			Name:<p ng-bind="username"></p>
+			<p>My first expression: {{ 5 + 5 }}</p>
+		</form>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.min.js">
+
+	</script>
+</body>
+</html>

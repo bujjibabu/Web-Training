@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="">
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body ng-controller="myCtrl">
+	<div class="container">
+		<form class="col-sm-offset-4 col-sm-4">
+			<div class="form-group">
+				<label ng-bind="fName"></label>
+				<input type="text" class="form-control " ng-model="FirstName" placeholder="Please enter firstname">
+			</div>
+			<div class="form-group">
+				<label ng-bind="lName"></label>
+				<input type="text" class="form-control" ng-model="LastName" placeholder="Please enter lastname">
+			</div>
+
+			<div ng-bind="fulname"> {{FirstName+" "+LastName}}
+			</div>
+
+
+		</form>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.min.js"></script>
+	<script type="text/javascript">
+	function myCtrl($scope){
+		$scope.fName='First Name';
+		$scope.lName='Last Name';
+		$scope.fulname='Full Name:';
+
+}
+</script>
+</body>
+</html>
