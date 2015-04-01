@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="">
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body ng-controller="myCtrl">
+	<div class="container">
+		<form class="col-sm-offset-4 col-sm-4">
+			<div class="form-group">
+				<label>User Name</label>
+				<input type="text" class="form-control username" ng-model="usename" placeholder="Please enter username">
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control password" ng-model="password" placeholder="Please enter password">
+			</div>
+			<div class="btn btn-primary btn-login" ng-click="fnSignIn()" ng-bind="loginName"></div>
+		</form>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.min.js"></script>
+	<script type="text/javascript">
+		function myCtrl($scope){
+			$scope.loginName='Login';
+			/*$scope.usename = 'bujjibabu';
+			$scope.password = 'bujjibabu';*/
+			/*var x = function(){
+				//logic
+			};*/
+			$scope.fnSignIn = function(){
+				$scope.myObject = {uname:$scope.usename, pwd:$scope.password};
+				/*$scope.myObject.uname = $scope.usename;
+				$scope.myObject.pwd = $scope.password;*/
+				console.log($scope.myObject);
+				$scope.usename='';
+				$scope.password='';		
+			}	
+		}
+	</script>
+</body>
+</html>
