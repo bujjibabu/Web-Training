@@ -1,0 +1,13 @@
+ul li{
+	display: inline-block;
+	background: #337ab7;
+	color:#fff;
+	padding:10px 30px;
+}
+ul li:hover{
+    background: #f0ad4e;
+	cursor: pointer;
+}
+.myactive{
+    background: #f0ad4e;
+}
