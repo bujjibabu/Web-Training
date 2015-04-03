@@ -82,13 +82,20 @@
     </div>
 
     </div>
+    <div class="btn btn-primary first">for table</div>
+    <table class="table table-bordered back"></table>
  </div>
 
 
  <script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
  <script type="text/javascript">
+
+$(function(){
+
+
+
 $('.save').click(function(){
-                              var myObject={}
+                             var myObject=[];
                               var user = $('.one').val();
                               var mailid = $('.two').val();
                               var pswd = $('.three').val();
@@ -109,13 +116,25 @@ $('.save').click(function(){
                               myObject.gender = mr;
                               myObject.gend = ms;
                               console.log(myObject);
+             
                 
 
+$('.first').click(function(){
+       
+                             var myvar=$('.back');
+                             myvar.append('<tr class="bg-success"><td>ID</td><td>Name</td><td>mobile</td></tr>');
+                             for (var i = 0; i < myObject.length; i++)
+                                 {
+                                       myvar.append('<tr><td>'+myObject[i].mailid+'</td><td>'+myObject[i].user+'</td><td>'+myObject[i].pswd+'</td></tr>')
+                                                      
+                                   }
 
-                           })
+                          })
 
+                      
+ })
 
-
+})
 
 
 

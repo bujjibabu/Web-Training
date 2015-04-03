@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>jquerytable</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+  <div class="btn btn-success tab">click for table</div>
+  <table class="table table-bordered ttab">hiihi</table>
+
+
+<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.tab').click(function(){
+
+			var myArray = [{no:1,name:'bujji',phone:954444443356},{no:2,name:'bujji1',phone:9544444433},{no:3,name:'bujji2',phone:95444444334},{no:4,name:'bujji',phone:9544444433},{no:5,name:'bujji4',phone:95444444378},{no:1,name:'bujji',phone:954444443356},{no:2,name:'bujji1',phone:9544444433},{no:3,name:'bujji2',phone:95444444334},{no:4,name:'bujji',phone:9544444433},{no:5,name:'bujji4',phone:95444444378},{no:1,name:'bujji',phone:954444443356},{no:2,name:'bujji1',phone:9544444433},{no:3,name:'bujji2',phone:95444444334},{no:4,name:'bujji',phone:9544444433},{no:5,name:'bujji4',phone:95444444378},{no:4,name:'MAHESH',phone:7852143209}];
+            var myvar=$('.ttab')
+            myvar.append('<tr class="bg-success"><td>SNo</td><td>Name</td><td>mobile</td></tr>');
+            for (var i = 0; i < myArray.length; i++) {
+            	myvar.append('<tr><td>'+myArray[i].no+'</td><td>'+myArray[i].name+'</td><td>'+myArray[i].phone+'</td></tr>')
+            };
+
+		})
+	})
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
