@@ -92,10 +92,11 @@
 
 $(function(){
 
-
+var myObject={};
+var myArray=[];
 
 $('.save').click(function(){
-                             var myObject=[];
+                             
                               var user = $('.one').val();
                               var mailid = $('.two').val();
                               var pswd = $('.three').val();
@@ -117,22 +118,26 @@ $('.save').click(function(){
                               myObject.gend = ms;
                               console.log(myObject);
              
-                
-
-$('.first').click(function(){
-       
+                      })
+                           
+                            myArray.push(myObject)
                              var myvar=$('.back');
                              myvar.append('<tr class="bg-success"><td>ID</td><td>Name</td><td>mobile</td></tr>');
-                             for (var i = 0; i < myObject.length; i++)
+
+$('.first').click(function(){
+      // debugger;
+                             
+                            
+                             for (var i = 0; i < myArray.length; i++)
                                  {
-                                       myvar.append('<tr><td>'+myObject[i].mailid+'</td><td>'+myObject[i].user+'</td><td>'+myObject[i].pswd+'</td></tr>')
+                                       myvar.append('<tr><td>'+myArray[0].mail+'</td><td>'+myArray[0].uname+'</td><td>'+myArray[0].password+'</td></tr>')
                                                       
                                    }
 
                           })
 
                       
- })
+
 
 })
 
