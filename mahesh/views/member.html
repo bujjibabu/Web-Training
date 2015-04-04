@@ -93,12 +93,9 @@
 $(function(){
 
 var myObject={};
-<<<<<<< HEAD
 var myArray=[];
 
-=======
-var myArray =[]
->>>>>>> 45a829f78f9daec91a9d5039b7d9b7fdbf3e8020
+
 $('.save').click(function(){
                              
                               var user = $('.one').val();
@@ -121,25 +118,29 @@ $('.save').click(function(){
                               myObject.gender = mr;
                               myObject.gend = ms;
                               console.log(myObject);
-<<<<<<< HEAD
+
              
                       })
                            
                             myArray.push(myObject)
-                             var myvar=$('.back');
-                             myvar.append('<tr class="bg-success"><td>ID</td><td>Name</td><td>mobile</td></tr>');
+                            var myvar=$('.back');
+                            
+                 myvar.append('<tr class="bg-success"><td>ID</td><td>Name</td><td>mobile</td></tr>');
+
+                            
 
 $('.first').click(function(){
-      // debugger;
-                             
+                 
                             
-                             for (var i = 0; i < myArray.length; i++)
-                                 {
-                                       myvar.append('<tr><td>'+myArray[0].mail+'</td><td>'+myArray[0].uname+'</td><td>'+myArray[0].password+'</td></tr>')
-=======
-                              
-              });
-        var myvar=$('.back');
+                            for (var i = 0; i < myArray.length; i++)
+                                       {
+                                          
+                                          myvar.append('<tr><td>'+myArray[0].mail+'</td><td>'+myArray[0].uname+'</td><td>'+myArray[0].password+'</td></tr>')
+                                        }
+
+
+                                });
+        /*var myvar=$('.back');
          myvar.append('<tr class="bg-success"><td>ID</td><td>Name</td><td>mobile</td></tr>');
 
 $('.first').click(function(){
@@ -148,14 +149,14 @@ $('.first').click(function(){
 
                              myArray.push(myObject)
 
-                            // for (var i = 0; i < myArray.length; i++)
-                                 //{
+                            ` for (var i = 0; i < myArray.length; i++)
+                                 {
                       myvar.append('<tr><td>'+myArray[0].mail+'</td><td>'+myArray[0].uname+'</td><td>'+myArray[0].password+'</td></tr>')
->>>>>>> 45a829f78f9daec91a9d5039b7d9b7fdbf3e8020
-                                                      
-                                  // }
 
-                          })
+                                                      
+                                   }
+
+                          })*/
 
                       
 
