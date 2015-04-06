@@ -93,7 +93,9 @@
 $(function(){
 
 var myObject={};
-var myArray =[]
+var myArray=[];
+
+
 $('.save').click(function(){
                              
                               var user = $('.one').val();
@@ -116,9 +118,29 @@ $('.save').click(function(){
                               myObject.gender = mr;
                               myObject.gend = ms;
                               console.log(myObject);
-                              
-              });
-        var myvar=$('.back');
+
+             
+                      })
+                           
+                            myArray.push(myObject)
+                            var myvar=$('.back');
+                            
+                 myvar.append('<tr class="bg-success"><td>ID</td><td>Name</td><td>mobile</td></tr>');
+
+                            
+
+$('.first').click(function(){
+                 
+                            
+                            for (var i = 0; i < myArray.length; i++)
+                                       {
+                                          
+                                          myvar.append('<tr><td>'+myArray[0].mail+'</td><td>'+myArray[0].uname+'</td><td>'+myArray[0].password+'</td></tr>')
+                                        }
+
+
+                                });
+        /*var myvar=$('.back');
          myvar.append('<tr class="bg-success"><td>ID</td><td>Name</td><td>mobile</td></tr>');
 
 $('.first').click(function(){
@@ -127,13 +149,14 @@ $('.first').click(function(){
 
                              myArray.push(myObject)
 
-                            // for (var i = 0; i < myArray.length; i++)
-                                 //{
+                            ` for (var i = 0; i < myArray.length; i++)
+                                 {
                       myvar.append('<tr><td>'+myArray[0].mail+'</td><td>'+myArray[0].uname+'</td><td>'+myArray[0].password+'</td></tr>')
-                                                      
-                                  // }
 
-                          })
+                                                      
+                                   }
+
+                          })*/
 
                       
 
