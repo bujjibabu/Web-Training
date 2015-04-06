@@ -1,0 +1,133 @@
+<!doctype html>
+<html ng-app="">
+<head>
+	<title>JSON</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body ng-controller="myCtrl">
+	<div class="container">
+		<h4>Table</h4>
+		<table class="table table-bordered tble-striped">
+			<thead>
+				<tr>
+					<td>S.NO</td>
+					<td>Action</td>
+					<td>Network</td>
+					<td>BussinessName</td>
+					<td>Corporation</td>
+					<td>Value</td>
+					<td>Reason</td>
+					<td>&nbsp;</td>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr ng-repeat="obj in myArray">
+					<td ng-bind="$index+1"></td>
+					<td><i class="glyphicon glyphicon-remove" ng-click="fnDeleteRow($index);"></i></td>
+
+					<td>
+						<select class="form-cotrol" ng-model="obj.network">
+							<option>At&T</option>
+							<option>Verizon</option>
+							<option>Sprint</option>
+							<option>T-Mobile</option>
+						</select>
+					</td>
+					<td>
+						<select class="form-control" ng-model="obj.bName">
+							<option>Enterprise</option>
+							<OPTION>BPO</OPTION>
+							<OPTION>Cloud Service</OPTION>
+							<OPTION>Techinical</OPTION>
+						</select>
+					</td>
+					<td>
+						<select class="form-control" ng-model="obj.corp">
+							<OPTION>telephone</OPTION>
+							<OPTION>governce</OPTION>
+							<OPTION>Dividends</OPTION>
+						</select>
+					</td>
+					<td>
+						<div class="form-group">
+							<label for="text" class="sr-only"></label>
+							<input type="text" class="form-control" placeholder="Enter the value" ng-model="obj.value">
+						</div>
+					</td>
+					<td>
+						<div class="form-group">
+							<label for="text"class="sr-only"></label>
+							<input type="text" class="form-control" placeholder="Enter the reason" ng-model="obj.reason">
+						</div>
+					</td>
+					<td ng-click="fnAddRow()" class="btn btn-success" ng-show="$index==0"><i class="glyphicon glyphicon-plus" style="color:yellow " ></i></td>
+				</tr>
+			</tbody>
+		</table>
+	
+
+		<div class="btn btn-danger" data-ng-click="fnCreate()" data-toggle="modal" data-target="#myModal">create</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">my Details</h4>
+			      </div>
+			      <div class="modal-body">
+					<h4>Table</h4>
+					<table class="table table-bordered tble-striped">
+						<thead>
+							<tr>
+								<td>S.NO</td>
+								<td>NetWork</td>
+								<td>BusinessName</td>
+								<td>Corporation</td>
+								<td>Value</td>
+								<td>Reason</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="obj in myArray">
+								<td ng-bind="$index+1"></td>
+								<td ng-bind="obj.network"></td>
+								<td ng-bind="obj.bname"></td>
+								<td ng-bind="obj.corp"></td>
+								<td ng-bind="obj.value"></td>
+								<td ng-bind="obj.reason"></td>
+							</tr>
+						</tbody>
+					</table>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Save changes</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+
+	</div>
+		<script type="text/javascript" src="../javascript/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.0.8/angular.min.js"></script>
+	<script type="text/javascript">
+	function myCtrl($scope){
+		$scope.myObj={network:'',bName:'',corp:'',reason:''};
+		$scope.myArray=[$scope.myObj];
+
+		$scope.fnAddRow = function(){
+			$scope.myArray.push({network:'',bName:'',corp:'',reason:''});
+		}
+
+		$scope.fnDeleteRow=function(index){
+			$scope.myArray.splice(index,1);
+		}
+	}
+
+	</script>
+</body>
+</html>
