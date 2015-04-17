@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name angularProjectApp
+ * @name angularprojApp
  * @description
- * # angularProjectApp
+ * # angularprojApp
  *
  * Main module of the application.
  */
 angular
-  .module('angularProjectApp', [
+  .module('angularprojApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
