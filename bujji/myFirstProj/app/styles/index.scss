@@ -2,12 +2,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-
-/*!
- *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
-
 @import "variables";
 @import "mixins";
 @import "path";
@@ -22,4 +16,5 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "icons";
 @import 'custom-variables';
 @import 'header';
+@import 'footer';
 
