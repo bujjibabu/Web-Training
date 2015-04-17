@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc function
- * @name angularprojApp.controller:MainCtrl
+ * @name testApp.controller:headerCtrl
  * @description
- * # MainCtrl
- * Controller of the angularprojApp
+ * # headerCtrl
+ * Controller of the testApp
  */
 angular.module('angularprojApp')
   .controller('headerCtrl', function ($scope,$location) {
-     $scope.getClass = function(path) {
+	  $scope.getClass = function(path) {
 	    if ($location.path().substr(0, path.length) == path) {
 	      return "active-menu-item"
 	    } else {
