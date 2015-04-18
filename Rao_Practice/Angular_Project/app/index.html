@@ -12,51 +12,22 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="angularProjectApp">
+  <body ng-app="angularprojApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">angularProject</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
+    <div class="bbmain container-fluid">
+    <div class="bb-header" ng-controller="headerctrl" ng-include="views/header.html">
+      <div ng-view="" class="bb-content clearfix"></div>
+        <div class="bb-footer clearfix">
+          <div data-ng-include="'views/footer.html'"></div>
       </div>
     </div>
-
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -85,8 +56,16 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/headerCtrl.js"></script>
+        <script src="scripts/controllers/homeCtrl.js"></script>
+        <script src="scripts/controllers/newsCtrl.js"></script>
+        <script src="scripts/controllers/storyFeedCtrl.js"></script>
+        <script src="scripts/controllers/mystoryCtrl.js"></script>
+        <script src="scripts/controllers/submitCtrl.js"></script>
+        <script src="scripts/controllers/eventsCtrl.js"></script>
+        <script src="scripts/controllers/contactCtrl.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        
         <!-- endbuild -->
 </body>
 </html>
