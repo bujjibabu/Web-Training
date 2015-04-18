@@ -28,19 +28,12 @@
 
 					<td>
 						<select class="form-cotrol" ng-model="obj.network">
-							<option>At&T</option>
-							<option>Verizon</option>
-							<option>Sprint</option>
-							<option>T-Mobile</option>
+							<option value="">please select</option>
+							<option ng-repeat="obj in options1">{{obj.name}}</option>
 						</select>
 					</td>
 					<td>
-						<select class="form-control" ng-model="obj.bName">
-							<option>Enterprise</option>
-							<OPTION>BPO</OPTION>
-							<OPTION>Cloud Service</OPTION>
-							<OPTION>Techinical</OPTION>
-						</select>
+						<select class="form-control" ng-model="x" ng-options="obj.name for obj in  secondDropdoenOptions"></select>
 					</td>
 					<td>
 						<select class="form-control" ng-model="obj.corp">
@@ -118,6 +111,12 @@
 	function myCtrl($scope){
 		$scope.myObj={network:'',bName:'',corp:'',reason:''};
 		$scope.myArray=[$scope.myObj];
+		$scope.options1 = [{name:'At&T',id:1},{name:'Verizon',id:2},{name:'Sprint',id:3},
+		{name:'T-Mobile',id:4}];
+		$scope.secondDropdoenOptions = [{name:'Enterprise',id:1},{name:'BPO',id:2},{name:'Cloud Service',id:3},{name:'Techinical',id:4}];
+		//var obj={};
+		$scope.x = $scope.secondDropdoenOptions[0];
+
 
 		$scope.fnAddRow = function(){
 			$scope.myArray.push({network:'',bName:'',corp:'',reason:''});
