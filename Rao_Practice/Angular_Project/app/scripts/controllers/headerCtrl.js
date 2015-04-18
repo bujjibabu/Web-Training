@@ -7,7 +7,7 @@
  * # headerCtrl
  * Controller of the testApp
  */
-angular.module('angularprojApp')
+angular.module('testApp')
   .controller('headerCtrl', function ($scope,$location) {
 	  $scope.getClass = function(path) {
 	    if ($location.path().substr(0, path.length) == path) {

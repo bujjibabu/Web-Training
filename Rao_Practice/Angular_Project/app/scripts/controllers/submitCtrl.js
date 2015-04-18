@@ -7,7 +7,7 @@
  * # SubmitCtrl
  * Controller of the testApp
  */
-angular.module('angularprojApp')
+angular.module('testApp')
   .controller('SubmitCtrl', function ($scope) {
     
   });

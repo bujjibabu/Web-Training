@@ -7,7 +7,7 @@
  * # NewsCtrl
  * Controller of the testApp
  */
-angular.module('angularprojApp')
+angular.module('testApp')
   .controller('NewsCtrl', function ($scope) {
     
   });

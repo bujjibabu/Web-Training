@@ -7,9 +7,9 @@
  * # HomeCtrl
  * Controller of the testApp
  */
-angular.module('angularprojApp')
-  .controller('HomeCtrl', function ($scope) {
-    $scope.myInterval = 5000;
+angular.module('testApp')
+  .controller('HomeCtrl', function ($scope,$http) {
+    $scope.myInterval = 2000;
 	  var slides = $scope.slides = [];
 	  $scope.addSlide = function() {
 	    var newWidth = 600 + slides.length + 1;
@@ -22,4 +22,15 @@ angular.module('angularprojApp')
 	  for (var i=0; i<4; i++) {
 	    $scope.addSlide();
 	  }
+
+	  //get thumbnail data
+
+	  $http.get('data/homethumbnails.json').
+	    success(function(data, status, headers, config) {debugger;
+	      $scope.thumbnailsData = data;
+	    }).
+	    error(function(data, status, headers, config) {
+	      console.log('unable to get data');
+	    });
+
   });

@@ -1,4 +1,4 @@
-  <div class="col-sm-4">
+  <div class="col-sm-6">
     <carousel interval="myInterval">
       <slide ng-repeat="slide in slides" active="slide.active">
         <img ng-src="{{slide.image}}" style="margin:auto;">
@@ -9,3 +9,12 @@
       </slide>
     </carousel>
   </div>
+  <p class="clearfix"></p>
+  <div class="col-sm-8">
+    <div class="col-sm-6" ng-repeat="obj in thumbnailsData">
+      <img ng-src="{{obj.imgurl}}" class="img-responsive"/>
+      <div class="col-sm-6 text-muted"><i class="glyphicon glyphicon-edit"></i> <span data-ng-bind="obj.date"></span></div>
+      <div class="col-sm-6 text-muted text-right"><i class="glyphicon glyphicon-edit"></i> <span data-ng-bind="obj.views"></span><i class="glyphicon glyphicon-edit"></i> <span data-ng-bind="obj.comments"></span></div>
+    </div>
+  </div>
+  <div class="col-sm-4"></div>

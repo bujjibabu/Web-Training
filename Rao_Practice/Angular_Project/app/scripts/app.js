@@ -2,32 +2,53 @@
 
 /**
  * @ngdoc overview
- * @name angularprojApp
+ * @name testApp
  * @description
- * # angularprojApp
+ * # testApp
  *
  * Main module of the application.
  */
 angular
-  .module('angularprojApp', [
+  .module('testApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      .when('/home', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/news', {
+        templateUrl: 'views/news.html',
+        controller: 'NewsCtrl'
+      })
+      .when('/storyfeed', {
+        templateUrl: 'views/storyFeed.html',
+        controller: 'storyFeedCtrl'
+      })
+      .when('/mystory', {
+        templateUrl: 'views/mystory.html',
+        controller: 'MystoryCtrl'
+      })
+      .when('/submit', {
+        templateUrl: 'views/submit.html',
+        controller: 'SubmitCtrl'
+      })
+      .when('/events', {
+        templateUrl: 'views/events.html',
+        controller: 'EventsCtrl'
+      })
+      .when('/contactus', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
   });

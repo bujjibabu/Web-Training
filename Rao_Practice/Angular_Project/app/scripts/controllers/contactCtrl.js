@@ -7,7 +7,7 @@
  * # ContactCtrl
  * Controller of the testApp
  */
-angular.module('angularprojApp')
+angular.module('testApp')
   .controller('ContactCtrl', function ($scope) {
     
   });
