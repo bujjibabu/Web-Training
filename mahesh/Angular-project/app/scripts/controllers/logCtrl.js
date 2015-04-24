@@ -8,8 +8,9 @@
  * Controller of the testApp
  */
 angular.module('angularProjectApp')
-  .controller('logCtrl', function myCtrl($scope) { 
-  		$scope.alert('jkdskj');
+  .controller('logCtrl', 
+  	function ($scope) { 
+  		
   
   	});
     
