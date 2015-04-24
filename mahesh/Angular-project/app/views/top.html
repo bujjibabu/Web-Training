@@ -1,4 +1,4 @@
-<div class="col-sm-12 bg-header">  
+<div class="col-sm-12 bg-header" ng-controller="loginCtrl">  
 
 		  <div class="col-sm-6">
 			  <div class="col-sm-offset-3 col-sm-4 fb-name-color" ><h1><b>facebook</b><h1></div>
@@ -13,7 +13,7 @@
 		    </div>
 		  <div class="col-sm-7">
 			    <div class="password-div-text-color"><h6>Password</h6></div>
-			    <div><input type="password" ng-model="pass">&nbsp;&nbsp;&nbsp;<span><button type="button" class="btn btn-xs login-btn" ng-click="log" ng-controller="myCtrl"><b>Log In</b></button></span></div>
+			    <div><input type="password" ng-model="pass">&nbsp;&nbsp;&nbsp;<span><button type="button" class="btn btn-xs login-btn" ng-click="fnLogin()" ><b>Log In</b></button></span></div>
 
 			    <div class="forgot-div-text-color"><h6>Forgot your password?</h6></div>
 		  </div>
