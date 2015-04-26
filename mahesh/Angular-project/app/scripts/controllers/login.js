@@ -12,5 +12,6 @@ angular.module('angularProjectApp')
    $scope.fnLogin  = function(){
    	 $scope.loginObj = {username:$scope.use,password:$scope.pass};
    	 console.log($scope.loginObj);
-   }
+   	 
+   };
   });
