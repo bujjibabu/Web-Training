@@ -26,7 +26,7 @@ angular.module('testApp')
 	  //get thumbnail data
 
 	  $http.get('data/homethumbnails.json').
-	    success(function(data, status, headers, config) {debugger;
+	    success(function(data, status, headers, config) {
 	      $scope.thumbnailsData = data;
 	    }).
 	    error(function(data, status, headers, config) {

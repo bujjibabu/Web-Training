@@ -9,12 +9,31 @@
       </slide>
     </carousel>
   </div>
+  <div>
+      <img src="">
+  </div>
   <p class="clearfix"></p>
   <div class="col-sm-8">
-    <div class="col-sm-6" ng-repeat="obj in thumbnailsData">
+    <div class="col-sm-6" ng-repeat="obj in thumbnailsData" style="margin-bottom: 40px;">
       <img ng-src="{{obj.imgurl}}" class="img-responsive"/>
-      <div class="col-sm-6 text-muted"><i class="glyphicon glyphicon-edit"></i> <span data-ng-bind="obj.date"></span></div>
-      <div class="col-sm-6 text-muted text-right"><i class="glyphicon glyphicon-edit"></i> <span data-ng-bind="obj.views"></span><i class="glyphicon glyphicon-edit"></i> <span data-ng-bind="obj.comments"></span></div>
+      <div class="tile-title"><h4 data-ng-bind="obj.title"></h4></div>
+      <div class="col-sm-6 text-muted date-edit"><i class="glyphicon glyphicon-edit"></i> <span data-ng-bind="obj.date"></span></div>
+      <div class="col-sm-6 text-muted text-right views-messages"><i class="glyphicon glyphicon-edit"></i> <span data-ng-bind="obj.views"></span><i class="glyphicon glyphicon-edit"></i> <span data-ng-bind="obj.comments"></span></div>
     </div>
   </div>
-  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <div class="col-sm-4 col-xs-6 text-center social-icon-rightside-section" data-ng-repeat="i in [1,2,3,4,5,67]">
+      <div class="social-icon-rightside">
+        <i class="fa fa-facebook social-icon"></i>
+        <div class="number">12345</div>
+        <div class="text">likes</div>
+      </div>
+    </div>
+    <p class="clearfix"></p>
+    <p class="clearfix"></p>
+    <h4 class="text-uppercase text-center">Most Recent</h4>
+    <div class="col-sm-12" ng-repeat="obj in thumbnailsData" style="margin-bottom: 10px;" data-ng-show="$index <= 2">
+      <img ng-src="{{obj.imgurl}}" class="img-responsive"/>
+      <div class="recentposts-title text-muted"><h4 data-ng-bind="obj.title"></h4></div>
+    </div>
+  </div>
