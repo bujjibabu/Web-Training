@@ -1,16 +1,21 @@
-  <div class="col-sm-6">
-    <carousel interval="myInterval">
-      <slide ng-repeat="slide in slides" active="slide.active">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
-        <div class="carousel-caption">
-          <h4>Slide {{$index}}</h4>
-          <p>{{slide.text}}</p>
-        </div>
-      </slide>
-    </carousel>
+  <div class="col-sm-7 paading-zero">
+    <div style="height: 410px">
+      <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+          <img ng-src="{{slide.image}}" style="margin:auto;width:100%">
+          <div class="carousel-caption">
+            <h4>Slide {{$index}}</h4>
+            <p>{{slide.text}}</p>
+          </div>
+        </slide>
+      </carousel>
+    </div>
   </div>
-  <div>
-      <img src="">
+  <div class="col-xs-5 paading-zero">
+      <img src="images/homeimage2.jpg" width:"100%" style="margin:auto;width:100%; border:1px solid #fff">
+  </div>
+  <div  class="col-xs-5 paading-zero">
+      <img src="images/homeimage2.jpg" width:"100%" style="margin:auto;width:100%;border:1px solid #fff">
   </div>
   <p class="clearfix"></p>
   <div class="col-sm-8">
@@ -32,8 +37,10 @@
     <p class="clearfix"></p>
     <p class="clearfix"></p>
     <h4 class="text-uppercase text-center">Most Recent</h4>
-    <div class="col-sm-12" ng-repeat="obj in thumbnailsData" style="margin-bottom: 10px;" data-ng-show="$index <= 2">
+    <div class="col-sm-12" ng-repeat="obj in mostRecent" style="margin-bottom: 10px;" data-ng-show="$index <= 2">
       <img ng-src="{{obj.imgurl}}" class="img-responsive"/>
+      <h4 class="lable-title"><a data-ng-bind="obj.label"></a></h4>
+      <l
       <div class="recentposts-title text-muted"><h4 data-ng-bind="obj.title"></h4></div>
     </div>
   </div>

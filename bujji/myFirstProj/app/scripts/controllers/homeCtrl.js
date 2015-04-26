@@ -33,4 +33,13 @@ angular.module('testApp')
 	      console.log('unable to get data');
 	    });
 
+// Most recent
+	     $http.get('data/mostRecent.json').
+	    success(function(data, status, headers, config) {
+	      $scope.mostRecent = data;
+	    }).
+	    error(function(data, status, headers, config) {
+	      console.log('unable to get data');
+	    });
+
   });
